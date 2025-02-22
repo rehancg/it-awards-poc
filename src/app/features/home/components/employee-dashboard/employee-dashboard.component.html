@@ -1,0 +1,49 @@
+<div class="dashboard-container">
+  <mat-card class="welcome-card">
+    <mat-card-header>
+      <mat-card-title>Welcome to IT Awards</mat-card-title>
+      <mat-card-subtitle>Recognize and appreciate your colleagues</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-grid-list cols="2" rowHeight="400px" gutterSize="24">
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>person_add</mat-icon>
+          <mat-card-title>Nominate Colleague</mat-card-title>
+          <mat-card-subtitle>Recognize outstanding contributions</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <app-quick-nominate></app-quick-nominate>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>emoji_events</mat-icon>
+          <mat-card-title>Top Performers</mat-card-title>
+          <mat-card-subtitle>This month's outstanding achievers</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <app-top-performers></app-top-performers>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>military_tech</mat-icon>
+          <mat-card-title>My Awards</mat-card-title>
+          <mat-card-subtitle>Your achievements and recognitions</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- My awards component will be added later -->
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

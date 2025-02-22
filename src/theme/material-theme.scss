@@ -1,0 +1,54 @@
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+@include mat.core();
+// Define the theme object.
+$it-awards-poc-theme: mat.define-theme((
+  color: (
+    theme-type: light
+  ),
+  density: (
+    scale: 0,
+  ),
+  typography: (
+    plain-family: var(--font-family),
+    brand-family: var(--font-family)
+  ),
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+  @include mat.all-component-themes($it-awards-poc-theme);
+  @include mat.typography-hierarchy($it-awards-poc-theme);
+  --primary: #003d5b;
+  --secondary: #B8D7E0;
+  --success: #10845b;
+  --text-primary: #2A2B2C;
+  --white: #fff;
+  --h4-font-size: 34px;
+  --h5-font-size: 24px;
+  --h6-font-size: 20px;
+  --body-font-size: 16px;
+  --font-family: 'Montserrat', sans-serif;
+
+  --mat-toolbar-container-background-color: var(--primary);
+  --mdc-elevated-card-container-color: var(--white);
+  --mat-paginator-container-background-color: var(--white);
+
+  @include mat.paginator-overrides((
+    container-background-color: var(--white),
+    container-text-color: var(--text-primary)
+  ));
+
+  @include mat.table-overrides((
+    background-color: var(--white),
+    row-item-label-text-color: var(--text-primary),
+    row-item-outline-color: rgb(223, 223, 223)
+  ));
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+@include mat.typography-hierarchy($it-awards-poc-theme);

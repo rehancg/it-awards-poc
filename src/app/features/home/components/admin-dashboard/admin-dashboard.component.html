@@ -1,0 +1,26 @@
+<div class="dashboard-container">
+  <mat-card class="welcome-card">
+    <div class="welcome-content">
+      <mat-card-title class="title text-white"
+        >Welcome to IT Awards Platform</mat-card-title
+      >
+      <mat-card-subtitle class="subtitle text-white"
+        >Recognize excellence, celebrate achievements.</mat-card-subtitle
+      >
+    </div>
+  </mat-card>
+
+  <div class="dashboard-card-container">
+    <mat-card class="dashboard-card mat-elevation-z2">
+      <span class="card-title">Pending Approvals</span>
+      <app-approvals-table></app-approvals-table>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <span class="card-title">Top Performers</span>
+      <mat-card-content>
+        <app-top-performers></app-top-performers>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './theme/material-theme.scss';
+
+
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+.text-white {
+  color: var(--white) !important;
+}
+
+.card-title {
+  font-size: var(--h6-font-size);
+  line-height: 32px;
+}

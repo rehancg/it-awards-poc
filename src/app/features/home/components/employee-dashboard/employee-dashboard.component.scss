@@ -1,0 +1,13 @@
+.dashboard-container {
+  height: calc(100vh - 48px); // Account for main padding
+  overflow-y: auto;
+  padding: 0;
+
+  .welcome-card {
+    margin-bottom: 24px;
+  }
+
+  mat-grid-list {
+    margin: 0 -12px; // Compensate for grid gutters
+  }
+}

@@ -1,0 +1,13 @@
+<nav class="sidebar" [class.collapsed]="isCollapsed">
+  <ul class="nav-items">
+    <li *ngFor="let item of navigationItems">
+      <a
+        [routerLink]="item.path"
+        [title]="isCollapsed ? item.label : ''"
+      >
+        <mat-icon class="nav-icon">{{item.icon}}</mat-icon>
+        <span class="nav-label">{{item.label}}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
