@@ -29,7 +29,7 @@ export class SidebarNavComponent {
       [UserRole.ADMIN]: [
         { path: '/team-awards', label: 'Team Awards', icon: 'groups' },
         { path: '/approvals', label: 'Approvals', icon: 'check_circle' },
-        { path: '/admin', label: 'Admin Configs', icon: 'settings' }
+        { path: '/admin-config', label: 'Admin Configs', icon: 'settings' }
       ],
       [UserRole.MODERATOR]: [
         { path: '/team-awards', label: 'Team Awards', icon: 'groups' },

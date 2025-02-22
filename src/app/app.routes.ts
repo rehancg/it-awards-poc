@@ -14,6 +14,26 @@ export const routes: Routes = [
           .then(m => m.HomeComponent)
       },
       {
+        path: 'culture-champion',
+        loadComponent: () => import('./features/culture-champion/culture-champion.component')
+          .then(m => m.CultureChampionComponent)
+      },
+      {
+        path: 'team-awards',
+        loadComponent: () => import('./features/team-awards/team-awards.component')
+          .then(m => m.TeamAwardsComponent)
+      },
+      {
+        path: 'approvals',
+        loadComponent: () => import('./features/approvals/approvals.component')
+          .then(m => m.ApprovalsComponent)
+      },
+      {
+        path: 'admin-config',
+        loadComponent: () => import('./features/admin/admin-config.component')
+          .then(m => m.AdminConfigComponent)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
