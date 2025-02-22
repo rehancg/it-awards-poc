@@ -47,6 +47,11 @@ $it-awards-poc-theme: mat.define-theme((
     row-item-label-text-color: var(--text-primary),
     row-item-outline-color: rgb(223, 223, 223)
   ));
+
+  @include mat.mdc-button-overrides((
+    filled-container-color: var(--primary),
+    filled-label-text-color: var(--white)
+  ));
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.

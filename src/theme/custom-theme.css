@@ -1,0 +1,48 @@
+/* Importing Angular Material styles is not possible in plain CSS, so this part is omitted. */
+
+/* Define CSS variables for the theme */
+:root {
+  --primary: #003d5b;
+  --secondary: #B8D7E0;
+  --success: #10845b;
+  --text-primary: #2A2B2C;
+  --white: #fff;
+  --h4-font-size: 34px;
+  --h5-font-size: 24px;
+  --h6-font-size: 20px;
+  --body-font-size: 16px;
+  --font-family: 'Montserrat', sans-serif;
+
+  --mat-toolbar-container-background-color: var(--primary);
+  --mdc-elevated-card-container-color: var(--white);
+  --mat-paginator-container-background-color: var(--white);
+}
+
+/* You would need to manually include the styles for each component here,
+   as SCSS mixins cannot be used in plain CSS. */
+
+.mat-mdc-card {
+  background-color: var(--white) !important;
+}
+
+.mat-paginator {
+  container-background-color: var(--white);
+  container-text-color: var(--text-primary)
+}
+
+.mat-table {
+  background-color: var(--white);
+  row-item-label-text-color: var(--text-primary);
+  row-item-outline-color: rgb(223, 223, 223);
+}
+
+.mat-toolbar {
+  background-color: var(--primary) !important;
+}
+
+/* Typography styles */
+body {
+  font-family: var(--font-family);
+}
+
+/* Additional styles can be added here */
