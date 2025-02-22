@@ -8,19 +8,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { SidebarNavComponent } from './components/sidebar-nav/sidebar-nav.component';
 
 @Component({
-  selector: 'app-layout',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
-    SidebarNavComponent
-  ],
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+    selector: 'app-layout',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatIconModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatMenuModule,
+        SidebarNavComponent
+    ],
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
   isSidebarCollapsed = false;

@@ -4,14 +4,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-top-performers',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatListModule,
-    MatIconModule
-  ],
-  template: `
+    selector: 'app-top-performers',
+    imports: [
+        CommonModule,
+        MatListModule,
+        MatIconModule
+    ],
+    template: `
     <mat-list>
       <mat-list-item *ngFor="let performer of topPerformers">
         <img matListItemAvatar [src]="performer.avatar" [alt]="performer.name">

@@ -7,18 +7,17 @@ import { TopPerformersComponent } from '../../../../shared/components/top-perfor
 import { ApprovalsTableComponent } from '../../../../shared/components/approvals-table/approvals-table.component';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
-  selector: 'app-admin-dashboard',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatGridListModule,
-    MatIconModule,
-    MatButtonModule,
-    TopPerformersComponent,
-    ApprovalsTableComponent
-  ],
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.scss']
+    selector: 'app-admin-dashboard',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatGridListModule,
+        MatIconModule,
+        MatButtonModule,
+        TopPerformersComponent,
+        ApprovalsTableComponent
+    ],
+    templateUrl: './admin-dashboard.component.html',
+    styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent {}

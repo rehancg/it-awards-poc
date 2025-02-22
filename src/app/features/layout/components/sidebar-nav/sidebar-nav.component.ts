@@ -5,15 +5,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { UserRole } from '../../../../core/models/user.model';
 
 @Component({
-  selector: 'app-sidebar-nav',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatIconModule
-  ],
-  templateUrl: './sidebar-nav.component.html',
-  styleUrls: ['./sidebar-nav.component.scss']
+    selector: 'app-sidebar-nav',
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatIconModule
+    ],
+    templateUrl: './sidebar-nav.component.html',
+    styleUrls: ['./sidebar-nav.component.scss']
 })
 export class SidebarNavComponent {
   @Input() isCollapsed = false;

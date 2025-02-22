@@ -36,6 +36,7 @@ $it-awards-poc-theme: mat.define-theme((
   --mat-toolbar-container-background-color: var(--primary);
   --mdc-elevated-card-container-color: var(--white);
   --mat-paginator-container-background-color: var(--white);
+  --mdc-outlined-button-label-text-color: var(--primary);
 
   @include mat.paginator-overrides((
     container-background-color: var(--white),
@@ -45,12 +46,12 @@ $it-awards-poc-theme: mat.define-theme((
   @include mat.table-overrides((
     background-color: var(--white),
     row-item-label-text-color: var(--text-primary),
-    row-item-outline-color: rgb(223, 223, 223)
+    row-item-outline-color: rgb(223, 223, 223),
   ));
 
-  @include mat.mdc-button-overrides((
-    filled-container-color: var(--primary),
-    filled-label-text-color: var(--white)
+  @include mat.button-overrides((
+    container-color: var(--primary),
+    outline-color: var(--primary),
   ));
 }
 

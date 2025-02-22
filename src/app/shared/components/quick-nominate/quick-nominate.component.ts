@@ -8,18 +8,17 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-quick-nominate',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatAutocompleteModule,
-    MatButtonModule
-  ],
-  template: `
+    selector: 'app-quick-nominate',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatAutocompleteModule,
+        MatButtonModule
+    ],
+    template: `
     <form [formGroup]="nominationForm" (ngSubmit)="onSubmit()">
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Colleague Name</mat-label>
@@ -51,7 +50,7 @@ import { MatButtonModule } from '@angular/material/button';
       </button>
     </form>
   `,
-  styles: [`
+    styles: [`
     .full-width {
       width: 100%;
       margin-bottom: 16px;

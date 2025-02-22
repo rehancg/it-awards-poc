@@ -7,17 +7,16 @@ import { TopPerformersComponent } from '../../../../shared/components/top-perfor
 import { QuickNominateComponent } from '../../../../shared/components/quick-nominate/quick-nominate.component';
 
 @Component({
-  selector: 'app-employee-dashboard',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatGridListModule,
-    MatIconModule,
-    TopPerformersComponent,
-    QuickNominateComponent
-  ],
-  templateUrl: './employee-dashboard.component.html',
-  styleUrls: ['./employee-dashboard.component.scss']
+    selector: 'app-employee-dashboard',
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatGridListModule,
+        MatIconModule,
+        TopPerformersComponent,
+        QuickNominateComponent
+    ],
+    templateUrl: './employee-dashboard.component.html',
+    styleUrls: ['./employee-dashboard.component.scss']
 })
 export class EmployeeDashboardComponent {}

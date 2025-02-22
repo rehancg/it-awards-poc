@@ -5,14 +5,13 @@ import { EmployeeDashboardComponent } from './components/employee-dashboard/empl
 import { UserRole } from '../../core/models/user.model';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    CommonModule,
-    AdminDashboardComponent,
-    EmployeeDashboardComponent
-  ],
-  template: `
+    selector: 'app-home',
+    imports: [
+        CommonModule,
+        AdminDashboardComponent,
+        EmployeeDashboardComponent
+    ],
+    template: `
     <ng-container [ngSwitch]="userRole">
       <app-admin-dashboard *ngSwitchCase="UserRole.ADMIN"></app-admin-dashboard>
       <app-employee-dashboard *ngSwitchCase="UserRole.EMPLOYEE"></app-employee-dashboard>

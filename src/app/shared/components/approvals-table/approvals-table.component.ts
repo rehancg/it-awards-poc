@@ -6,17 +6,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-approvals-table',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatTableModule,
-    MatChipsModule,
-    MatCardModule,
-    MatPaginatorModule
-  ],
-  templateUrl: './approvals-table.component.html',
-  styleUrls: ['./approvals-table.component.scss']
+    selector: 'app-approvals-table',
+    imports: [
+        CommonModule,
+        MatTableModule,
+        MatChipsModule,
+        MatCardModule,
+        MatPaginatorModule
+    ],
+    templateUrl: './approvals-table.component.html',
+    styleUrls: ['./approvals-table.component.scss']
 })
 export class ApprovalsTableComponent implements OnInit {
   displayedColumns: string[] = ['nominee', 'award', 'status'];
