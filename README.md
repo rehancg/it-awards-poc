@@ -1,4 +1,35 @@
-# ItAwardsPoc
+# Angular Enterprise Application
+
+## Overview
+This is an enterprise-level Angular application featuring role-based access control, state management, and various business features including culture champion management and approvals workflows.
+
+## Features
+- **Authentication & Authorization**
+  - Role-based access control
+  - Secure state management for auth
+  - Protected routes
+
+- **Core Features**
+  - Culture Champion management
+  - Approvals system
+  - Custom theming support
+  - Responsive sidebar navigation
+
+## Technical Stack
+- Angular (Frontend Framework)
+- NgRx/Store (State Management)
+- Custom Theming (CSS)
+- HTTP Interceptors for API handling
+
+## API Integration
+The application includes a robust API handling system with:
+- Centralized API service for HTTP requests
+- Request/Response interceptors
+- Error handling
+- Type-safe API interfaces
+- Environment-based API configuration
+
+## Project Structure
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
