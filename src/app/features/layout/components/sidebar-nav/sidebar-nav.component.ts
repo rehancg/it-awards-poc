@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { UserRole } from '../../../../core/models/user.model';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../../../store';
+import { selectUserRole } from '../../../../store/auth/auth.selectors';
 
 @Component({
     selector: 'app-sidebar-nav',
@@ -16,15 +19,18 @@ import { UserRole } from '../../../../core/models/user.model';
 })
 export class SidebarNavComponent {
   @Input() isCollapsed = false;
-  // Temporarily hardcoded for testing - should come from auth service
-  userRole: UserRole = UserRole.ADMIN;
+  userRole$;
 
-  get navigationItems() {
+  constructor(private store: Store<AppState>) {
+    this.userRole$ = this.store.select(selectUserRole);
+  }
+
+  getNavigationItems(userRole: UserRole | null) {
     const baseItems = [
       { path: '/', label: 'Home', icon: 'home' },
       { path: '/culture-champion', label: 'Culture Champion', icon: 'emoji_events' }
     ];
-
+    if (!userRole) return baseItems;
     const roleSpecificItems = {
       [UserRole.ADMIN]: [
         { path: '/team-awards', label: 'Team Awards', icon: 'groups' },
@@ -41,6 +47,6 @@ export class SidebarNavComponent {
       [UserRole.EMPLOYEE]: []
     };
 
-    return [...baseItems, ...roleSpecificItems[this.userRole]];
+    return [...baseItems, ...roleSpecificItems[userRole]];
   }
 }

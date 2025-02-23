@@ -1,6 +1,6 @@
 <nav class="sidebar" [class.collapsed]="isCollapsed">
   <ul class="nav-items">
-    <li *ngFor="let item of navigationItems">
+    <li *ngFor="let item of getNavigationItems(userRole$ | async)">
       <a
         [routerLink]="item.path"
         [title]="isCollapsed ? item.label : ''"
